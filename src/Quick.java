@@ -3,7 +3,7 @@ import edu.princeton.cs.algs4.StdRandom;
 public class Quick {
 
 	public static void sort(Comparable[] a) {
-		StdRandom.shuffle(a); 	//  Ïû³ı¶ÔÊäÈëµÄÒÀÀµ
+		StdRandom.shuffle(a); 	//  æ¶ˆé™¤å¯¹è¾“å…¥çš„ä¾èµ–
 		sort(a, 0, a.length - 1);
 	}
 	
@@ -24,17 +24,17 @@ public class Quick {
 		a[j] = t;
 	}
 	public static int partition(Comparable[] a, int lo, int hi) {
-		// ½«Êı×éÇĞ·ÖÎªa[lo..i-1],a[i],a[i+1..hi]
-		int i = lo, j = hi+1;	//×óÓÒÉ¨ÃèÖ¸Õë
+		// å°†æ•°ç»„åˆ‡åˆ†ä¸ºa[lo..i-1],a[i],a[i+1..hi]
+		int i = lo, j = hi+1;	//å·¦å³æ‰«ææŒ‡é’ˆ
 		Comparable v = a[lo];
 		while (true) {
-			// É¨Ãè×óÓÒ£¬¼ì²éÉ¨ÃèÊÇ·ñ½áÊø²¢½»»»ÔªËØ
+			// æ‰«æå·¦å³ï¼Œæ£€æŸ¥æ‰«ææ˜¯å¦ç»“æŸå¹¶äº¤æ¢å…ƒç´ 
 			while (less(a[++i], v)) if (i == hi) break;
 			while (less(v, a[--j])) if (j == lo) break;
 			if (i >= j) break;
 			exch(a, i, j);
 		}
-		exch(a, lo, j);	//½«v=a[j]·ÅÈëÕıÈ·µÄÎ»ÖÃ
+		exch(a, lo, j);	//å°†v=a[j]æ”¾å…¥æ­£ç¡®çš„ä½ç½®
 		return j;
 	}
 	

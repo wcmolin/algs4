@@ -1,7 +1,7 @@
 import edu.princeton.cs.algs4.In;
 
 /**
- * Á·Ï°2.1.18
+ * ï¿½ï¿½Ï°2.1.18
  * @author wangchao
  *
  */
