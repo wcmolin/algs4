@@ -4,12 +4,12 @@ import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdOut;
 
 /**
- * ¹é²¢ÅÅĞò
+ * å½’å¹¶æ’åº
  * @author wangchao
  *
  */
 public class Merge {
-	private static Comparable[] aux; // ¹é²¢ËùĞèµÄ¸¨ÖúÊı×é
+	private static Comparable[] aux; // å½’å¹¶æ‰€éœ€çš„è¾…åŠ©æ•°ç»„
 	
 	public static void sort(Comparable[] a) {
 		aux = new Comparable[a.length];
@@ -17,7 +17,7 @@ public class Merge {
 	}
 	
 	public static void sort(Comparable[] a, int lo, int hi) {
-		// ½«Êı¾İa[lo..hi]ÅÅĞò
+		// å°†æ•°æ®a[lo..hi]æ’åº
 		if (hi <= lo) return;
 		int mid = lo + (hi - lo) / 2;
 		sort(a, lo, mid);
@@ -32,11 +32,11 @@ public class Merge {
 	public static void merge(Comparable[] a, int lo, int mid, int hi) {
 		int i = lo, j = mid + 1;
 		for (int k = lo; k <= hi; k++) {
-			// ½«a[lo..hi]¸´ÖÆµ½aux[lo..hi]
+			// å°†a[lo..hi]å¤åˆ¶åˆ°aux[lo..hi]
 			aux[k] = a[k];
 		}
 		for (int k = lo; k <= hi; k++) {
-			// ¹é²¢»Øµ½a[lo..hi]
+			// å½’å¹¶å›åˆ°a[lo..hi]
 			if (i > mid) {
 				System.out.printf("i > mid | i = %d, mid = %d\n", i, mid);
 				a[k] = aux[j++];

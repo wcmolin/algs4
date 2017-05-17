@@ -1,9 +1,8 @@
-import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
 
 /**
- * ±È½ÏÁ½ÖÖÅÅĞòËã·¨
+ * æ¯”è¾ƒä¸¤ç§æ’åºç®—æ³•
  * @author wangchao
  *
  */
@@ -20,11 +19,11 @@ public class SortCompare {
 	}
 	
 	public static double timeRandomInput(String alg, int N, int T) {
-		// Ê¹ÓÃËã·¨1½«T¸ö³¤¶ÈÎªNµÄÊı×éÅÅĞò
+		// ä½¿ç”¨ç®—æ³•1å°†Tä¸ªé•¿åº¦ä¸ºNçš„æ•°ç»„æ’åº
 		double total = 0.0;
 		Double[] a = new Double[N];
 		for (int t = 0; t < T; t++) {
-			// ½øĞĞÒ»´Î²âÊÔ£¨Éú³ÉÒ»¸öÊı×é²¢ÅÅĞò£©
+			// è¿›è¡Œä¸€æ¬¡æµ‹è¯•ï¼ˆç”Ÿæˆä¸€ä¸ªæ•°ç»„å¹¶æ’åºï¼‰
 			for (int i = 0; i < N; i++) {
 				a[i] = StdRandom.uniform();
 			}
